@@ -53,7 +53,7 @@
     }
     function onMessage(event){
         console.log("onMessage");
-        document.getElementById("msg").innerHTML += "<p>response:"+event.data+"</p>"
+        document.getElementById("msg").innerHTML += "<p>"+event.data+"</p>"
     }
 
     function onClose(event){
@@ -75,7 +75,7 @@
         console.log("send:"+sockState());
         console.log("msg="+msg);
         webSocket.send("msg="+msg);
-        document.getElementById("msg").innerHTML += "<p>request: "+msg+"</p>"
+        document.getElementById("msg").innerHTML += "<p>游客💬: "+msg+"</p>"
     }
 
     function close(event){

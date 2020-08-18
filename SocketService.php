@@ -107,7 +107,7 @@ class SocketService
                     echo "{$key} client msg:", $msg, "\n";
                     //fwrite(STDOUT, 'Please input a argument:');
                     //$response = trim(fgets(STDIN));
-                    $response = '🌹，Good! : '.random_int(1,100000);
+                    $response = '------------------------------';
                     $this->send($_sock, $response);
                     //echo "{$key} response to Client:" . $response, "\n";
                 }

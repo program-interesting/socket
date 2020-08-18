@@ -107,7 +107,7 @@ class SocketService
                     echo "{$key} client msg:", $msg, "\n";
                     fwrite(STDOUT, 'Please input a argument:');
                     $response = trim(fgets(STDIN));
-                    //$response = '------------------------------';
+                    $response = "管理员💬：$response";
                     $this->send($_sock, $response);
                     //echo "{$key} response to Client:" . $response, "\n";
                 }

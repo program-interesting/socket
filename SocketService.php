@@ -105,9 +105,9 @@ class SocketService
                      * 这里业务代码：🌹
                      */
                     echo "{$key} client msg:", $msg, "\n";
-                    //fwrite(STDOUT, 'Please input a argument:');
-                    //$response = trim(fgets(STDIN));
-                    $response = '------------------------------';
+                    fwrite(STDOUT, 'Please input a argument:');
+                    $response = trim(fgets(STDIN));
+                    //$response = '------------------------------';
                     $this->send($_sock, $response);
                     //echo "{$key} response to Client:" . $response, "\n";
                 }
@@ -188,7 +188,7 @@ class SocketService
     }
 
     /**
-     * 标识
+     * 字节流输出
      * @param $s
      * @return string
      * @User : lidi

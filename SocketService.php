@@ -1,5 +1,9 @@
 <?php
 
+ini_set('date.timezone', 'Asia/Shanghai');
+
+header('content-Type:text/html;charset=utf-8;');
+
 /**
  * Class SocketService
  * @User : lidi

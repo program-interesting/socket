@@ -1,16 +1,19 @@
 # hello  socket  For  PHP
 
+
 ## 1、修改 web.html 文件中的host
-```html
+```js
     //TODO 将 127.0.0.1 替换为服务的真实 Host, 即可
     let host = '127.0.0.1';
 ```
+
 
 ## 2、修改 index.php 文件中的host
 ```php
     //TODO 将 127.0.0.1 替换为服务的真实 Host, 即可
     $host     = '127.0.0.1';
 ```
+
 
 ## 3、启动服务：访问 host + 8088 即可
 ```php

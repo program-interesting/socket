@@ -30,7 +30,9 @@ class SocketService
      */
     public function service()
     {
-        //获取tcp协议号码。
+        /**
+         * 获取tcp协议号码
+         */
         $tcp  = getprotobyname("tcp");
         $sock = socket_create(AF_INET, SOCK_STREAM, $tcp);
         socket_set_option($sock, SOL_SOCKET, SO_REUSEADDR, 1);
@@ -99,12 +101,15 @@ class SocketService
                     $byte = socket_recv($_sock, $buffer, 2048, 0);
                     if ($byte < 7) continue;
                     $msg = $this->message($buffer);
-                    //在这里业务代码
+                    /**
+                     * 这里业务代码：🌹
+                     */
                     echo "{$key} client msg:", $msg, "\n";
-                    fwrite(STDOUT, 'Please input a argument:');
-                    $response = trim(fgets(STDIN));
+                    //fwrite(STDOUT, 'Please input a argument:');
+                    //$response = trim(fgets(STDIN));
+                    $response = '🌹，Good! : '.random_int(1,100000);
                     $this->send($_sock, $response);
-                    echo "{$key} response to Client:" . $response, "\n";
+                    //echo "{$key} response to Client:" . $response, "\n";
                 }
             }
         }

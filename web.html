@@ -75,7 +75,7 @@
         console.log("send:"+sockState());
         console.log("msg="+msg);
         webSocket.send("msg="+msg);
-        document.getElementById("msg").innerHTML += "<p>request"+msg+"</p>"
+        document.getElementById("msg").innerHTML += "<p>request: "+msg+"</p>"
     }
 
     function close(event){
